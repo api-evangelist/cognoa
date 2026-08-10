@@ -1,17 +1,33 @@
 aid: cognoa
 name: Cognoa
-description: 'Cognoa is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Cognoa is a pediatric behavioral health company in Palo Alto, California
+  building digital diagnostics and therapeutics for early childhood development, starting
+  with autism. Its flagship product, Canvas Dx, is an FDA-authorized Software as a
+  Medical Device that aids clinicians in diagnosing or ruling out autism spectrum disorder
+  in children aged 18 to 72 months, combining a caregiver questionnaire, short home
+  videos scored by credentialed human video analysts, and a healthcare-provider questionnaire
+  into a machine-learning classifier that returns Positive, Negative, or Indeterminate.
+  Canvas Dx is delivered as an iOS/Android caregiver app plus a prescriber web portal
+  at app.cognoa.com; Cognoa ships no public developer API, SDK, or webhook surface.'
 url: https://raw.githubusercontent.com/api-evangelist/cognoa/refs/heads/main/apis.yml
+image: https://cognoa.com/wp-content/uploads/cropped-Cognoa-C-192x192.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-09'
 modified: '2026-08-09'
 tags:
 - Company
+- Health
+- Digital Health
+- Healthcare
+- Autism
+- Pediatrics
+- Diagnostics
+- Artificial Intelligence
+- Machine Learning
+- Software as a Medical Device
+- Behavioral Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/cognoa-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://cognoa.com/
+- type: Portal
+  url: https://app.cognoa.com/
+- type: Login
+  url: https://app.cognoa.com/sign_in
+- type: Support
+  url: https://cognoa.com/support/
+- type: Blog
+  url: https://cognoa.com/press/
+- type: BlogRSS
+  url: https://cognoa.com/feed/
+- type: GitHubOrganization
+  url: https://github.com/cognoa
+- type: TermsOfService
+  url: https://cognoa.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://app.cognoa.com/link/privacy-policy/
+- type: Compliance
+  url: https://cognoa.com/wp-content/uploads/2023/06/CA-Cognoa-Comprehensive-Compliance-Program.pdf
+x-enrichment:
+  date: '2026-08-09'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Cognoa ships Canvas Dx only as an end-user medical device — a caregiver iOS/Android
+    app and a prescriber web portal at app.cognoa.com — with no developer portal, no
+    published spec and no SDK; the portal is a Rails app that answers every
+    /.well-known/*, /openapi.json, /graphql and /mcp probe with its "Oops! We couldn't
+    locate your page!" not-found shell (HTML 200 or JSON 404), so none of those 200s is
+    a real discovery document.
+  evidence:
+  - url: https://cognoa.com/openapi.json
+    status: 404
+  - url: https://app.cognoa.com/openapi.json
+    status: 404
+  - url: https://app.cognoa.com/.well-known/agent-card.json
+    status: 200
+  - url: https://cognoa.com/.well-known/security.txt
+    status: 404
+  - url: https://github.com/cognoa
+    status: 200
+  checked: '2026-08-09'
