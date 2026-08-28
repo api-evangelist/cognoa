@@ -10,6 +10,17 @@ description: 'Cognoa is a pediatric behavioral health company in Palo Alto, Cali
   Canvas Dx is delivered as an iOS/Android caregiver app plus a prescriber web portal
   at app.cognoa.com; Cognoa ships no public developer API, SDK, or webhook surface.'
 url: https://raw.githubusercontent.com/api-evangelist/cognoa/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cognoa.com/wp-content/uploads/cropped-Cognoa-C-192x192.png
 x-type: company
 x-source: harvest:secondary-market
