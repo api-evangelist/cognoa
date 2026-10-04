@@ -48,7 +48,7 @@ tags:
 - Pediatrics
 - Diagnostics
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Software as a Medical Device
 - Behavioral Health
 tags_raw:
@@ -63,6 +63,7 @@ tags_raw:
 - Machine Learning
 - Software as a Medical Device
 - Behavioral Health
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
